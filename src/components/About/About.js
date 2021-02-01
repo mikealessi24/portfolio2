@@ -10,7 +10,7 @@ export default function FullWidthGrid() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Paper className={classes.paper}>About me</Paper>
+          <Paper className={classes.title}>About me</Paper>
         </Grid>
         <Grid item xs={12} sm={4} md={4} lg={4}>
           <Paper className={classes.imageContainer1}>
