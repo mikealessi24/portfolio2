@@ -1,32 +1,7 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
+import { Box, Paper, Grid } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    height: "94vh",
-    width: "100%",
-    backgroundColor: "#333333",
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    backgroundColor: theme.palette.primary.main,
-    color: "white",
-  },
-
-  title: {
-    width: 200,
-    padding: theme.spacing(2),
-    textAlign: "center",
-    backgroundColor: theme.palette.primary.main,
-    color: "white",
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
-}));
+import useStyles from "./style";
 
 export default function FullWidthGrid() {
   const classes = useStyles();
@@ -34,26 +9,57 @@ export default function FullWidthGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={classes.title}>About me</Paper>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+          <Paper className={classes.paper}>About me</Paper>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
+        <Grid item xs={12} sm={4} md={4} lg={4}>
+          <Paper className={classes.imageContainer1}>
+            <img
+              src="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt=""
+              className={classes.image}
+            />
+          </Paper>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
+        <Grid item xs={12} sm={8} md={8} lg={8}>
+          <Paper className={classes.paper}>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum." "Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum."
+          </Paper>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+              <Paper className={classes.paper}>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </Paper>
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+              <Paper className={classes.imageContainer2}>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7a/1859-Martinique.web.jpg"
+                  alt=""
+                  className={classes.image}
+                ></img>
+              </Paper>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </div>

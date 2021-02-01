@@ -98,8 +98,9 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
   },
   content: {
-    flexGrow: 1,
-    overflowX: "hidden",
+    overflow: "hidden",
+    // FIX: something wrong with the scroll
+    // overflowY: "scroll",
     // padding: theme.spacing(3),
   },
 
@@ -135,6 +136,7 @@ const useStyles = makeStyles((theme) => ({
       width: "2.5em",
       fontSize: "3.5rem",
     },
+    border: `2px solid ${theme.palette.primary.main}`,
   },
 
   themeSwitch: {
