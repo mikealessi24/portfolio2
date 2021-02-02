@@ -19,6 +19,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import About from "../About/About";
 import useStyles from "./style";
 import DevSkills from "../DevSkills/DevSkills";
+import ExpTimeline from "../Timeline/ExpTimeline";
+import ProjectContainer from "../ProjectContainer/ProjectContainer";
 
 import TimelineIcon from "@material-ui/icons/Timeline";
 import CodeIcon from "@material-ui/icons/Code";
@@ -26,6 +28,7 @@ import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import AppsIcon from "@material-ui/icons/Apps";
 import { Switch } from "@material-ui/core";
 
 import avi from "../../assets/avi.jpg";
@@ -110,6 +113,7 @@ export default function Main({ setUserTheme, userTheme }) {
             },
             { text: "Dev Skills", icon: <CodeIcon /> },
             { text: "Timeline", icon: <TimelineIcon /> },
+            { text: "Projects", icon: <AppsIcon /> },
             { text: "Contact Me", icon: <ContactPhoneIcon /> },
           ].map((item) => (
             <ListItem button key={item.text}>
@@ -141,14 +145,12 @@ export default function Main({ setUserTheme, userTheme }) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <div className={classes.header}>
-          <Avatar
-            alt="Mike Alessi"
-            src={avi}
-            className={classes.headerAvatar}
-          />
+          <Avatar alt="Mike Alessi" src="" className={classes.headerAvatar} />
         </div>
         <About />
         <DevSkills />
+        <ExpTimeline />
+        <ProjectContainer />
       </main>
     </div>
   );
