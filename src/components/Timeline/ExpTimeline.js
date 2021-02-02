@@ -24,7 +24,7 @@ export default function ExpTimeline() {
     <Timeline align="alternate" className={classes.timeline}>
       <TimelineItem className={classes.topItems}>
         <TimelineOppositeContent>
-          <Chip label="2015-2019" className={classes.date} />
+          <Chip label="August 2015 - June 2019" className={classes.date} />
         </TimelineOppositeContent>
         <TimelineSeparator>
           {/* <TimelineDot variant="outlined" color="primary"> */}
@@ -35,7 +35,7 @@ export default function ExpTimeline() {
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Eat
+              College of Charleston
             </Typography>
             <Typography>Because you need strength</Typography>
           </Paper>
@@ -43,7 +43,7 @@ export default function ExpTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Chip label="whatever" className={classes.date} />
+          <Chip label="March 2018 - August 2020" className={classes.date} />
         </TimelineOppositeContent>
         <TimelineSeparator>
           <Avatar src={stars} className={classes.avatar} />
@@ -52,7 +52,7 @@ export default function ExpTimeline() {
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Code
+              Stars Rooftop & Grill Room
             </Typography>
             <Typography>Because it&apos;s awesome!</Typography>
           </Paper>
@@ -60,7 +60,7 @@ export default function ExpTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Chip label="whatever" className={classes.date} />
+          <Chip label="August 2020 - December 2020" className={classes.date} />
         </TimelineOppositeContent>
         <TimelineSeparator>
           <Avatar src={jrsLogo} className={classes.avatar} />
@@ -77,7 +77,7 @@ export default function ExpTimeline() {
       </TimelineItem>
       <TimelineItem className={classes.bottomItems}>
         <TimelineOppositeContent>
-          <Chip label="whatever" className={classes.date} />
+          <Chip label="January 2021 - Present" className={classes.date} />
         </TimelineOppositeContent>
         <TimelineSeparator>
           <Avatar src={ct} className={classes.avatar} />

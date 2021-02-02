@@ -129,16 +129,38 @@ export default function Main({ setUserTheme, userTheme }) {
         <Divider /> */}
         <List>
           {[
-            { text: "Github", icon: <GitHubIcon /> },
-            { text: "Twitter", icon: <TwitterIcon /> },
-            { text: "LinkedIn", icon: <LinkedInIcon /> },
+            {
+              text: "Github",
+              icon: <GitHubIcon />,
+              url: "https://github.com/mikealessi24",
+            },
+            {
+              text: "Twitter",
+              icon: <TwitterIcon />,
+              url: "https://twitter.com/alessimg24",
+            },
+            {
+              text: "LinkedIn",
+              icon: <LinkedInIcon />,
+              url: "https://www.linkedin.com/in/michael-alessi/",
+            },
           ].map((item) => (
-            <ListItem button key={item.text}>
-              <ListItemIcon className={classes.sideIcon}>
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText className={classes.sideText} primary={item.text} />
-            </ListItem>
+            <a
+              className={classes.link}
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ListItem button key={item.text}>
+                <ListItemIcon className={classes.sideIcon}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.sideText}
+                  primary={item.text}
+                />
+              </ListItem>
+            </a>
           ))}
         </List>
       </Drawer>

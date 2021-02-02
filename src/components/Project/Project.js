@@ -31,7 +31,7 @@ export default function Project({ image, title, text, url }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button className={classes.button} size="small">
           Visit
         </Button>
       </CardActions>

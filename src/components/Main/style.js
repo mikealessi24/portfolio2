@@ -110,6 +110,10 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     right: 5,
   },
+  link: {
+    color: "inherit",
+    textDecoration: "inherit",
+  },
 }));
 
 export default useStyles;
