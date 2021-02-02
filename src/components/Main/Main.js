@@ -167,7 +167,11 @@ export default function Main({ setUserTheme, userTheme }) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <div className={classes.header}>
-          <Avatar alt="Mike Alessi" src="" className={classes.headerAvatar} />
+          <Avatar
+            alt="Mike Alessi"
+            src={avi}
+            className={classes.headerAvatar}
+          />
         </div>
         <About />
         <DevSkills />

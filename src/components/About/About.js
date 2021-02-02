@@ -3,6 +3,10 @@ import { Box, Paper, Grid } from "@material-ui/core";
 
 import useStyles from "./style";
 
+import santorini from "../../assets/santorini.jpeg";
+import jets1 from "../../assets/jets1.jpeg";
+import jets from "../../assets/jets.jpeg";
+
 export default function FullWidthGrid() {
   const classes = useStyles();
 
@@ -14,11 +18,7 @@ export default function FullWidthGrid() {
         </Grid>
         <Grid item xs={12} sm={4} md={4} lg={4}>
           <Paper className={classes.imageContainer1}>
-            <img
-              src="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt=""
-              className={classes.image}
-            />
+            <img src={santorini} alt="" className={classes.image} />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={8} md={8} lg={8}>
@@ -39,7 +39,7 @@ export default function FullWidthGrid() {
             officia deserunt mollit anim id est laborum."
           </Paper>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
+            <Grid item xs={12} sm={6} md={5} lg={5}>
               <Paper className={classes.paper}>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -50,13 +50,9 @@ export default function FullWidthGrid() {
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </Paper>
             </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
+            <Grid item xs={12} sm={6} md={7} lg={7}>
               <Paper className={classes.imageContainer2}>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/7a/1859-Martinique.web.jpg"
-                  alt=""
-                  className={classes.image}
-                ></img>
+                <img src={jets} alt="" className={classes.image}></img>
               </Paper>
             </Grid>
           </Grid>

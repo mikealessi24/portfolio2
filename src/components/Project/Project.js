@@ -17,7 +17,7 @@ export default function Project({ image, title, text, url }) {
         <CardMedia
           component="img"
           alt="project"
-          height="200"
+          height="220"
           image={image}
           title={title}
         />
@@ -30,11 +30,6 @@ export default function Project({ image, title, text, url }) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button className={classes.button} size="small">
-          Visit
-        </Button>
-      </CardActions>
     </Card>
   );
 }

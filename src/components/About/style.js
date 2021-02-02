@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     margin: theme.spacing(2),
     backgroundColor: theme.palette.primary.main,
+    height: 590,
     [theme.breakpoints.down("sm")]: {
       height: "auto",
       width: "auto",
