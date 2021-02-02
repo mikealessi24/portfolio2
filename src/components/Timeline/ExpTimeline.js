@@ -15,6 +15,7 @@ import { Avatar, Chip } from "@material-ui/core";
 import cofc from "../../assets/cofc.jpg";
 import jrsLogo from "../../assets/jrsLogo.jpg";
 import stars from "../../assets/stars.png";
+import ct from "../../assets/codeTrust.jpeg";
 
 export default function ExpTimeline() {
   const classes = useStyles();
@@ -79,7 +80,7 @@ export default function ExpTimeline() {
           <Chip label="whatever" className={classes.date} />
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <Avatar src="" className={classes.avatar} />
+          <Avatar src={ct} className={classes.avatar} />
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
