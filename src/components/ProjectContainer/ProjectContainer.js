@@ -44,18 +44,6 @@ export default function ProjectContainer() {
             text="this is the text"
             url="whatever"
           />
-          <Project
-            image={component}
-            title="component cart"
-            text="this is the text"
-            url="whatever"
-          />
-          <Project
-            image={pickup}
-            title="pickup"
-            text="this is the text"
-            url="whatever"
-          />
         </Grid>
       </Grid>
     </div>

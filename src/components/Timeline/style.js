@@ -6,9 +6,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.font,
   },
-  timeline: {
+  timelineContainer: {
     backgroundColor: "#333333",
-    margin: 0,
+    padding: theme.spacing(3),
+  },
+  timeline: {
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
   },
   lineConnector: {
     height: 100,
@@ -20,12 +24,6 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     height: 50,
     width: 50,
-  },
-  topItems: {
-    marginTop: theme.spacing(4),
-  },
-  bottomItems: {
-    marginBottom: theme.spacing(4),
   },
 }));
 
