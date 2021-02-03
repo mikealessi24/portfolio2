@@ -11,6 +11,7 @@ export const dark = {
     secondary: {
       main: "#e6e6e6",
       font: "black",
+      toggle: "#1a1a1a",
     },
   },
 };
@@ -27,6 +28,7 @@ export const light = {
     secondary: {
       main: "#1a1a1a",
       font: "white",
+      toggle: "#ffe44d",
     },
   },
 };

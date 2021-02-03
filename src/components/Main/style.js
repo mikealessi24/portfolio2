@@ -118,6 +118,10 @@ const useStyles = makeStyles((theme) => ({
   name: {
     color: theme.palette.primary.main,
   },
+
+  toggle: {
+    backgroundColor: `${theme.palette.secondary.toggle} !important`,
+  },
 }));
 
 export default useStyles;

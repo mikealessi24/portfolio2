@@ -29,7 +29,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AppsIcon from "@material-ui/icons/Apps";
-import { Switch } from "@material-ui/core";
+import { Switch, Tooltip } from "@material-ui/core";
 
 import avi from "../../assets/avi.jpg";
 
@@ -72,12 +72,23 @@ export default function Main({ setUserTheme, userTheme }) {
           <Typography variant="h6" noWrap className={classes.name}>
             Hi, I'm Mike Alessi
           </Typography>
-          <Switch
-            onChange={() => {
-              setUserTheme(!userTheme);
-            }}
-            className={classes.themeSwitch}
-          />
+          <Tooltip
+            title={
+              userTheme === false ? "Toggle dark mode" : "Toggle light mode"
+            }
+            placement="left"
+          >
+            <Switch
+              onChange={() => {
+                setUserTheme(!userTheme);
+              }}
+              className={classes.themeSwitch}
+              classes={{
+                thumb: classes.toggle,
+                track: classes.toggle,
+              }}
+            />
+          </Tooltip>
         </Toolbar>
       </AppBar>
       <Drawer
