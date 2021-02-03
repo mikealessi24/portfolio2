@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: "100%",
-    backgroundColor: "#333333",
+    backgroundColor: theme.palette.primary.background,
     [theme.breakpoints.down("sm")]: {
       height: "auto",
     },
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
     textAlign: "center",
     backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.font,
+    color: "white",
   },
 
   title: {
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     marginTop: theme.spacing(3),
     textAlign: "center",
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.accent,
     color: theme.palette.primary.font,
   },
 

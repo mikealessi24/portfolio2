@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: "100%",
-    backgroundColor: "#333333",
+    backgroundColor: theme.palette.primary.background,
     [theme.breakpoints.down("sm")]: {
       height: "auto",
     },
@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     marginTop: theme.spacing(3),
     textAlign: "center",
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.font,
+    backgroundColor: theme.palette.primary.accent,
+    color: "white",
   },
   projectDisplay: {
     display: "flex",

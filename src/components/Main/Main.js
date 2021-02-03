@@ -69,7 +69,7 @@ export default function Main({ setUserTheme, userTheme }) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" noWrap className={classes.name}>
             Hi, I'm Mike Alessi
           </Typography>
           <Switch
@@ -124,7 +124,9 @@ export default function Main({ setUserTheme, userTheme }) {
             </ListItem>
           ))}
         </List>
-        <Divider style={{ backgroundColor: theme.palette.secondary.main }} />
+        <Divider
+          style={{ backgroundColor: theme.palette.primary.accent, height: 2 }}
+        />
         {/* <div>socials</div>
         <Divider /> */}
         <List>

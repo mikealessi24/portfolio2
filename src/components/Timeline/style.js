@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.font,
   },
   timelineContainer: {
-    backgroundColor: "#333333",
+    backgroundColor: theme.palette.primary.background,
     padding: theme.spacing(3),
   },
   timeline: {
@@ -16,9 +16,12 @@ const useStyles = makeStyles((theme) => ({
   },
   lineConnector: {
     height: 100,
+    backgroundColor: theme.palette.primary.red,
   },
   date: {
     marginTop: theme.spacing(1.5),
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.font,
   },
   avatar: {
     margin: theme.spacing(1),

@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.secondary.main,
   },
 
   appBarShift: {
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: 36,
+    color: theme.palette.primary.main,
   },
   hide: {
     display: "none",
@@ -113,6 +114,9 @@ const useStyles = makeStyles((theme) => ({
   link: {
     color: "inherit",
     textDecoration: "inherit",
+  },
+  name: {
+    color: theme.palette.primary.main,
   },
 }));
 
