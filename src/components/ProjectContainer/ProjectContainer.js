@@ -12,40 +12,43 @@ export default function ProjectContainer() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={12} md={6} lg={6}></Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
-          <Paper className={classes.title}>Projects</Paper>
+    <>
+      <div className={classes.scrollBuffer} id="projects"></div>
+      <div className={classes.root} id="projects">
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={12} md={6} lg={6}></Grid>
+          <Grid item xs={12} sm={12} md={6} lg={6}>
+            <Paper className={classes.title}>Projects</Paper>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+            className={classes.projectDisplay}
+          >
+            <Project
+              image={pickup}
+              title="pickup"
+              text="this is the text"
+              url="whatever"
+            />
+            <Project
+              image={component}
+              title="component cart"
+              text="this is the text"
+              url="whatever"
+            />
+            <Project
+              image={pickup}
+              title="pickup"
+              text="this is the text"
+              url="whatever"
+            />
+          </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-          className={classes.projectDisplay}
-        >
-          <Project
-            image={pickup}
-            title="pickup"
-            text="this is the text"
-            url="whatever"
-          />
-          <Project
-            image={component}
-            title="component cart"
-            text="this is the text"
-            url="whatever"
-          />
-          <Project
-            image={pickup}
-            title="pickup"
-            text="this is the text"
-            url="whatever"
-          />
-        </Grid>
-      </Grid>
-    </div>
+      </div>
+    </>
   );
 }

@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
       width: "auto",
     },
   },
+  scrollBuffer: {
+    height: "7vh",
+    backgroundColor: theme.palette.primary.background,
+  },
 }));
 
 export default useStyles;

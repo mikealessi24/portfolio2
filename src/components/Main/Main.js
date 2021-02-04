@@ -121,18 +121,24 @@ export default function Main({ setUserTheme, userTheme }) {
             {
               text: "About Me",
               icon: <Avatar className={classes.sideAvatar} src={avi} />,
+              id: "#about",
             },
-            { text: "Dev Skills", icon: <CodeIcon /> },
-            { text: "Timeline", icon: <TimelineIcon /> },
-            { text: "Projects", icon: <AppsIcon /> },
-            { text: "Contact Me", icon: <ContactPhoneIcon /> },
+            { text: "Dev Skills", icon: <CodeIcon />, id: "#dev" },
+            { text: "Timeline", icon: <TimelineIcon />, id: "#timeline" },
+            { text: "Projects", icon: <AppsIcon />, id: "#projects" },
+            { text: "Contact Me", icon: <ContactPhoneIcon />, id: "#contact" },
           ].map((item) => (
-            <ListItem button key={item.text}>
-              <ListItemIcon className={classes.sideIcon}>
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText className={classes.sideText} primary={item.text} />
-            </ListItem>
+            <a className={classes.link} href={item.id}>
+              <ListItem button key={item.text}>
+                <ListItemIcon className={classes.sideIcon}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.sideText}
+                  primary={item.text}
+                />
+              </ListItem>
+            </a>
           ))}
         </List>
         <Divider

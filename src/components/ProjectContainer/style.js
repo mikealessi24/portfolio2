@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    // height: "100vh",
     width: "100%",
     backgroundColor: theme.palette.primary.background,
     [theme.breakpoints.down("sm")]: {
@@ -36,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flexDirection: "column",
     },
+  },
+  scrollBuffer: {
+    height: "7vh",
+    backgroundColor: theme.palette.primary.background,
   },
 }));
 

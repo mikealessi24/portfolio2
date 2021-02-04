@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   },
   timelineContainer: {
     backgroundColor: theme.palette.primary.background,
-    padding: theme.spacing(3),
+    padding: theme.spacing(4),
   },
   timeline: {
     marginTop: theme.spacing(4),

@@ -22,7 +22,7 @@ export default function ExpTimeline() {
   const classes = useStyles();
 
   return (
-    <div className={classes.timelineContainer}>
+    <div className={classes.timelineContainer} id="timeline">
       <Timeline className={classes.timeline} align="alternate">
         <TimelineItem>
           <TimelineOppositeContent>
