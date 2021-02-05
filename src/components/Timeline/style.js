@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   lineConnector: {
     height: 100,
-    backgroundColor: theme.palette.primary.red,
+    backgroundColor: "#cc0000",
   },
   date: {
     marginTop: theme.spacing(1.5),

@@ -32,7 +32,7 @@ export default function ExpTimeline() {
             {/* <TimelineDot variant="outlined" color="primary"> */}
             <Avatar src={cofc} className={classes.avatar} />
             {/* </TimelineDot> */}
-            <TimelineConnector className={classes.lineConnector} />
+            <TimelineConnector classes={{ root: classes.lineConnector }} />
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
@@ -49,7 +49,7 @@ export default function ExpTimeline() {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <Avatar src={stars} className={classes.avatar} />
-            <TimelineConnector className={classes.lineConnector} />
+            <TimelineConnector classes={{ root: classes.lineConnector }} />
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
@@ -69,7 +69,7 @@ export default function ExpTimeline() {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <Avatar src={jrsLogo} className={classes.avatar} />
-            <TimelineConnector className={classes.lineConnector} />
+            <TimelineConnector classes={{ root: classes.lineConnector }} />
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>

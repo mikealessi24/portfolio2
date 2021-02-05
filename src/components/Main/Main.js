@@ -21,6 +21,7 @@ import useStyles from "./style";
 import DevSkills from "../DevSkills/DevSkills";
 import ExpTimeline from "../Timeline/ExpTimeline";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
+import Contact from "../Contact/Contact";
 
 import TimelineIcon from "@material-ui/icons/Timeline";
 import CodeIcon from "@material-ui/icons/Code";
@@ -196,6 +197,7 @@ export default function Main({ setUserTheme, userTheme }) {
         <DevSkills />
         <ExpTimeline />
         <ProjectContainer />
+        <Contact />
       </main>
     </div>
   );
