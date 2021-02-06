@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import iphone from "../../assets/contact.png";
+import background from "../../assets/profileCard.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.background,
   },
 
-  contact: {
+  contactPhone: {
     display: "flex",
     justifyContent: "center",
     alignItems: "flex-start",
@@ -56,6 +57,44 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "3",
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
+    display: "flex",
+    alignItems: "flex-end",
+  },
+  contactCard: {
+    margin: theme.spacing(2),
+    height: 625,
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.primary.font,
+    padding: theme.spacing(2),
+    display: "flex",
+    flexDirection: "column",
+  },
+  contactCard__title: {
+    color: theme.palette.primary.font,
+    backgroundColor: theme.palette.primary.accent,
+    textAlign: "center",
+    fontSize: 20,
+  },
+  contactCard__profile: {
+    height: "30%",
+    marginTop: theme.spacing(2),
+    display: "flex",
+    alignItems: "center",
+    backgroundImage: `url(${background})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  },
+  contactCard__avatar: {
+    height: 125,
+    width: 125,
+    margin: theme.spacing(2),
+  },
+  email: {
+    fontSize: 25,
+    display: "flex",
+    alignItems: "center",
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
 }));
 
