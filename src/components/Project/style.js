@@ -2,14 +2,32 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: theme.spacing(2),
-    maxWidth: 345,
-    color: theme.palette.primary.font,
-    backgroundColor: theme.palette.primary.main,
+    width: 345,
+    backgroundColor: "#d9d9d9",
+    color: "#1a1a1a",
   },
-  button: {
-    backgroundColor: theme.palette.primary.font,
-    color: theme.palette.primary.main,
+  subheader: {
+    color: "#1a1a1a",
+  },
+  media: {
+    height: 0,
+    paddingTop: "56.25%", // 16:9
+  },
+  expand: {
+    transform: "rotate(0deg)",
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: "rotate(180deg)",
+  },
+  actions: {
+    backgroundColor: "#d9d9d9",
+  },
+  icon: {
+    color: "#1a1a1a",
   },
 }));
 

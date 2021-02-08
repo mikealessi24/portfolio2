@@ -11,6 +11,8 @@ import component from "../../assets/Projects/componentCart.png";
 export default function ProjectContainer() {
   const classes = useStyles();
 
+  const [expanded, setExpanded] = React.useState(false);
+
   return (
     <>
       <div className={classes.scrollBuffer} id="projects"></div>
@@ -31,20 +33,30 @@ export default function ProjectContainer() {
             <Project
               image={pickup}
               title="pickup"
-              text="this is the text"
-              url="whatever"
+              text="what if the text is long what if the text is long what if the text is 
+              long what if the text is long what if the text is long what if the text is long 
+              what if the text is long what if the text is long what if the text is long what if the 
+              text is long what if the text is long what if the text is long"
+              url="https://dev.d3oo9vyk0aa8nj.amplifyapp.com/"
+              date="1"
+              expanded={expanded}
+              setExpanded={setExpanded}
             />
             <Project
               image={component}
               title="component cart"
               text="this is the text"
               url="whatever"
+              expanded={expanded}
+              setExpanded={setExpanded}
             />
             <Project
               image={pickup}
               title="pickup"
               text="this is the text"
               url="whatever"
+              expanded={expanded}
+              setExpanded={setExpanded}
             />
           </Grid>
         </Grid>
