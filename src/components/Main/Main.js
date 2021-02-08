@@ -30,6 +30,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AppsIcon from "@material-ui/icons/Apps";
+import DescriptionIcon from "@material-ui/icons/Description";
 import { Switch, Tooltip } from "@material-ui/core";
 
 import avi from "../../assets/avi.jpg";
@@ -149,6 +150,11 @@ export default function Main({ setUserTheme, userTheme }) {
         <Divider /> */}
         <List>
           {[
+            {
+              text: "Resume",
+              icon: <DescriptionIcon />,
+              url: "https://resume.io/r/6qk8nN9cQ",
+            },
             {
               text: "Github",
               icon: <GitHubIcon />,
