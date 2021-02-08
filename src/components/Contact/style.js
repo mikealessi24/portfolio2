@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: "100%",
+    paddingTop: theme.spacing(3),
     backgroundColor: theme.palette.primary.background,
     [theme.breakpoints.down("sm")]: {
       height: "auto",
@@ -15,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
-    marginTop: theme.spacing(3),
     textAlign: "center",
     backgroundColor: theme.palette.primary.accent,
     color: theme.palette.primary.font,
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   phoneOutline: {
-    height: "83%",
+    height: "89%",
     width: "78%",
     zIndex: "2",
     borderBottomLeftRadius: 30,
@@ -51,14 +51,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   contactForm: {
-    height: "98%",
+    height: "95%",
     width: "100%",
     backgroundColor: "white",
     zIndex: "3",
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    display: "flex",
-    alignItems: "flex-end",
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    borderBottomLeftRadius: 25,
+    borderBottomRightRadius: 25,
   },
   contactCard: {
     margin: theme.spacing(2),
@@ -69,32 +69,22 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
-  contactCard__title: {
-    color: theme.palette.primary.font,
-    backgroundColor: theme.palette.primary.accent,
-    textAlign: "center",
-    fontSize: 20,
-  },
+
   contactCard__profile: {
     height: "30%",
-    marginTop: theme.spacing(2),
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
   },
   contactCard__avatar: {
     height: 125,
     width: 125,
     margin: theme.spacing(2),
-  },
-  email: {
-    fontSize: 25,
-    display: "flex",
-    alignItems: "center",
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
   },
 }));
 
