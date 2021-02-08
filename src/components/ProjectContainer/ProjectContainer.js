@@ -11,7 +11,24 @@ import component from "../../assets/Projects/componentCart.png";
 export default function ProjectContainer() {
   const classes = useStyles();
 
-  const [expanded, setExpanded] = React.useState(false);
+  const projects = [
+    {
+      image: pickup,
+      title: "pickup",
+      text:
+        "what if the text is long what if the text is long what if the text is long if the text is long what if the text is long what if the text is long what if the text is long what if the text is long what if the text is long what if the  text is long what if the text is long what if the text is long",
+      url: "https://dev.d3oo9vyk0aa8nj.amplifyapp.com/",
+      date: "1",
+    },
+
+    {
+      image: "image",
+      title: "new",
+      text: "ok",
+      url: "https://dev.d3oo9vyk0aa8nj.amplifyapp.com/",
+      date: "1",
+    },
+  ];
 
   return (
     <>
@@ -30,34 +47,16 @@ export default function ProjectContainer() {
             lg={12}
             className={classes.projectDisplay}
           >
-            <Project
-              image={pickup}
-              title="pickup"
-              text="what if the text is long what if the text is long what if the text is 
-              long what if the text is long what if the text is long what if the text is long 
-              what if the text is long what if the text is long what if the text is long what if the 
-              text is long what if the text is long what if the text is long"
-              url="https://dev.d3oo9vyk0aa8nj.amplifyapp.com/"
-              date="1"
-              expanded={expanded}
-              setExpanded={setExpanded}
-            />
-            <Project
-              image={component}
-              title="component cart"
-              text="this is the text"
-              url="whatever"
-              expanded={expanded}
-              setExpanded={setExpanded}
-            />
-            <Project
-              image={pickup}
-              title="pickup"
-              text="this is the text"
-              url="whatever"
-              expanded={expanded}
-              setExpanded={setExpanded}
-            />
+            {projects.map((project, i) => (
+              <Project
+                image={project.image}
+                title={project.title}
+                text={project.text}
+                url={project.url}
+                date={project.date}
+                i={i}
+              />
+            ))}
           </Grid>
         </Grid>
       </div>

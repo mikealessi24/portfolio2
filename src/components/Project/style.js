@@ -1,10 +1,19 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  expandableCard: {
     width: 345,
     backgroundColor: "#d9d9d9",
     color: "#1a1a1a",
+  },
+  fixedCard: {
+    width: 345,
+    height: 345,
+    backgroundColor: "#d9d9d9",
+    color: "#1a1a1a",
+    transition: theme.transitions.create("height", {
+      duration: theme.transitions.duration.standard,
+    }),
   },
   subheader: {
     color: "#1a1a1a",

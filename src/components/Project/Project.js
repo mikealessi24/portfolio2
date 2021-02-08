@@ -13,23 +13,19 @@ import PageviewIcon from "@material-ui/icons/Pageview";
 
 import useStyles from "./style";
 
-export default function Project({
-  title,
-  text,
-  image,
-  url,
-  date,
-  expanded,
-  setExpanded,
-}) {
+export default function Project({ title, text, image, url, date, i }) {
   const classes = useStyles();
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const [expandedId, setExpandedId] = React.useState(-1);
+  const handleExpandClick = (i) => {
+    setExpandedId(expandedId === i ? -1 : i);
   };
 
   return (
-    <Card className={classes.root} raised>
+    <Card
+      className={expandedId === i ? classes.expandableCard : classes.fixedCard}
+      raised
+    >
       <CardHeader
         classes={{ subheader: classes.subheader }}
         title={title}
@@ -42,16 +38,16 @@ export default function Project({
         </IconButton>
         <IconButton
           className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
+            [classes.expandOpen]: expandedId === i,
           })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
+          onClick={() => handleExpandClick(i)}
+          aria-expanded={expandedId === i}
           aria-label="show more"
         >
           <ExpandMoreIcon className={classes.icon} />
         </IconButton>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={expandedId === i} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>{text}</Typography>
         </CardContent>
