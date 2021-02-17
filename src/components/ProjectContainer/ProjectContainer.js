@@ -14,7 +14,7 @@ export default function ProjectContainer() {
   const projects = [
     {
       image: pickup,
-      title: "pickup",
+      title: "Pickup",
       text:
         "what if the text is long what if the text is long what if the text is long if the text is long what if the text is long what if the text is long what if the text is long what if the text is long what if the text is long what if the  text is long what if the text is long what if the text is long",
       url: "https://dev.d3oo9vyk0aa8nj.amplifyapp.com/",
@@ -22,10 +22,11 @@ export default function ProjectContainer() {
     },
 
     {
-      image: "image",
-      title: "new",
+      image: component,
+      title: "Component Cart",
       text: "ok",
-      url: "https://dev.d3oo9vyk0aa8nj.amplifyapp.com/",
+      url:
+        "http://test-cohort-5-group-cohortfive.s3-website-us-east-1.amazonaws.com/",
       date: "1",
     },
   ];

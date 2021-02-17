@@ -5,15 +5,18 @@ const useStyles = makeStyles((theme) => ({
     width: 345,
     backgroundColor: "#d9d9d9",
     color: "#1a1a1a",
+    margin: theme.spacing(2),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
   },
   fixedCard: {
     width: 345,
     height: 345,
     backgroundColor: "#d9d9d9",
     color: "#1a1a1a",
-    transition: theme.transitions.create("height", {
-      duration: theme.transitions.duration.standard,
-    }),
+    margin: theme.spacing(2),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
   },
   subheader: {
     color: "#1a1a1a",
