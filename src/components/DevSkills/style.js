@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     textAlign: "center",
     backgroundColor: theme.palette.primary.accent,
-    color: theme.palette.primary.font,
+    color: "white",
   },
 
   image: {

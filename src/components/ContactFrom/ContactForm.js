@@ -34,9 +34,17 @@ export default function ContactForm() {
         resetForm();
       }}
     >
-      {({ values, errors, isSubmitting, handleChange, handleBlur }) => (
+      {({
+        values,
+        errors,
+        touched,
+        isSubmitting,
+        handleChange,
+        handleBlur,
+      }) => (
         <>
-          {console.log(errors.name)}
+          {console.log(errors)}
+          {console.log(touched)}
           <Form className={classes.form}>
             <TextField
               fullWidth
@@ -47,7 +55,7 @@ export default function ContactForm() {
               value={values.name}
               onChange={handleChange}
               onBlur={handleBlur}
-              error={errors.name}
+              error={errors.name && touched.name}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -65,7 +73,7 @@ export default function ContactForm() {
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              error={errors.email}
+              error={errors.email && touched.email}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -83,7 +91,7 @@ export default function ContactForm() {
               value={values.subject}
               onChange={handleChange}
               onBlur={handleBlur}
-              error={errors.subject}
+              error={errors.subject && touched.subject}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -103,7 +111,7 @@ export default function ContactForm() {
               value={values.message}
               onChange={handleChange}
               onBlur={handleBlur}
-              error={errors.message}
+              error={errors.message && touched.message}
               InputProps={{
                 endAdornment: (
                   <InputAdornment

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     textAlign: "center",
     backgroundColor: theme.palette.primary.accent,
-    color: theme.palette.primary.font,
+    color: "white",
   },
   scrollBuffer: {
     height: "7vh",
