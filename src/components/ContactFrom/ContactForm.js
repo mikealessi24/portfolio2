@@ -1,7 +1,14 @@
 import React from "react";
 
 import useStyles from "./style";
-import { TextField, Button, InputAdornment } from "@material-ui/core";
+import {
+  TextField,
+  Button,
+  InputAdornment,
+  CircularProgress,
+  Snackbar,
+  Paper,
+} from "@material-ui/core";
 
 import { Formik, Field, Form, useField, FieldArray } from "formik";
 import * as yup from "yup";
@@ -13,6 +20,8 @@ import SubjectIcon from "@material-ui/icons/Subject";
 
 export default function ContactForm() {
   const classes = useStyles();
+
+  const [openSnack, setOpenSnack] = React.useState(false);
 
   const validationSchema = yup.object({
     name: yup.string().required(),
@@ -30,8 +39,10 @@ export default function ContactForm() {
         //make async call
         console.log(data);
         //call finished
-        setSubmitting(false);
-        resetForm();
+        setTimeout(() => {
+          setSubmitting(false);
+        }, 2000);
+        setOpenSnack(true);
       }}
     >
       {({
@@ -43,8 +54,6 @@ export default function ContactForm() {
         handleBlur,
       }) => (
         <>
-          {console.log(errors)}
-          {console.log(touched)}
           <Form className={classes.form}>
             <TextField
               fullWidth
@@ -124,13 +133,20 @@ export default function ContactForm() {
               }}
             />
             <Button
-              disabled={isSubmitting}
               variant="outlined"
               className={classes.sendBtn}
               type="submit"
             >
-              Send
+              {!isSubmitting ? (
+                "Send"
+              ) : (
+                <CircularProgress size={25} color="inherit" />
+              )}
             </Button>
+            {/* <Snackbar
+              open={isSubmitting}
+              classes={{ root: classes.snackRoot }}
+            /> */}
           </Form>
         </>
       )}

@@ -29,7 +29,7 @@ export default function Project({ title, text, image, url, date, i }) {
       <CardHeader
         classes={{ subheader: classes.subheader }}
         title={title}
-        subheader="date"
+        subheader={date}
       />
       <CardMedia className={classes.media} image={image} alt="project" />
       <CardActions disableSpacing classes={{ root: classes.actions }}>

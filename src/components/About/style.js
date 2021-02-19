@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     backgroundColor: theme.palette.primary.accent,
     color: "white",
+    fontSize: 24,
+    textShadow: "3px 1px 2px rgba(0, 0, 0, 1);",
+    fontFamily: '"Arvo", serif',
   },
 
   image: {

@@ -18,7 +18,7 @@ export default function ProjectContainer() {
       text:
         "what if the text is long what if the text is long what if the text is long if the text is long what if the text is long what if the text is long what if the text is long what if the text is long what if the text is long what if the  text is long what if the text is long what if the text is long",
       url: "https://dev.d3oo9vyk0aa8nj.amplifyapp.com/",
-      date: "1",
+      date: "December 2020",
     },
 
     {
@@ -27,7 +27,28 @@ export default function ProjectContainer() {
       text: "ok",
       url:
         "http://test-cohort-5-group-cohortfive.s3-website-us-east-1.amazonaws.com/",
-      date: "1",
+      date: "Late November 2020",
+    },
+    {
+      image: "",
+      title: "Portfolio v1",
+      text: "ok",
+      url: "",
+      date: "Early January 2021",
+    },
+    {
+      image: "",
+      title: "FirstLine Social",
+      text: "ok",
+      url: "",
+      date: "Late January 2021",
+    },
+    {
+      image: "",
+      title: "EventGives",
+      text: "ada stuff",
+      url: "",
+      date: "Febuary 2021",
     },
   ];
 
