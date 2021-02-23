@@ -22,6 +22,7 @@ import DevSkills from "../DevSkills/DevSkills";
 import ExpTimeline from "../Timeline/ExpTimeline";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
 import Contact from "../Contact/Contact";
+import ScrollTop from "../ScrollTop/ScrollTop";
 
 import TimelineIcon from "@material-ui/icons/Timeline";
 import CodeIcon from "@material-ui/icons/Code";
@@ -31,7 +32,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AppsIcon from "@material-ui/icons/Apps";
 import DescriptionIcon from "@material-ui/icons/Description";
-import { Switch, Tooltip } from "@material-ui/core";
+import { Switch, Tooltip, useScrollTrigger } from "@material-ui/core";
 
 import avi from "../../assets/avi.jpg";
 
@@ -190,7 +191,8 @@ export default function Main({ setUserTheme, userTheme }) {
           ))}
         </List>
       </Drawer>
-      <main className={classes.content}>
+      <main className={classes.content} id="top">
+        <ScrollTop />
         <div className={classes.toolbar} />
         <div className={classes.header}>
           <Avatar

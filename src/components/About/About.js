@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Paper, Grid } from "@material-ui/core";
+import { Box, Paper, Grid, useScrollTrigger } from "@material-ui/core";
 
 import useStyles from "./style";
 
