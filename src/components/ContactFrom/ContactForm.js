@@ -145,7 +145,7 @@ export default function ContactForm() {
                   )}
               </Button>
               <Snackbar
-                message="Your email has been sent!"
+                message="Your email has been sent!"  //this can be a node sent with an icon
                 open={isSubmitting}
                 anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
                 classes={{ root: classes.snackRoot }}

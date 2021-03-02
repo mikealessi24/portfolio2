@@ -38,6 +38,8 @@ import avi from "../../assets/avi.jpg";
 
 import { Avatar } from "@material-ui/core";
 
+import "./name.css"
+
 export default function Main({ setUserTheme, userTheme }) {
   const classes = useStyles();
   const theme = useTheme();
@@ -72,9 +74,9 @@ export default function Main({ setUserTheme, userTheme }) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap className={classes.name}>
-            Hi, I'm Mike Alessi
-          </Typography>
+          <div className="name">
+            <h3 className={classes.name}>Hi, I'm Mike Alessi.</h3>
+          </div>
           <Tooltip
             title={
               userTheme === false ? "Toggle dark mode" : "Toggle light mode"
@@ -115,8 +117,8 @@ export default function Main({ setUserTheme, userTheme }) {
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
-              <ChevronLeftIcon />
-            )}
+                <ChevronLeftIcon />
+              )}
           </IconButton>
         </div>
         <List>
