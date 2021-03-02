@@ -25,6 +25,20 @@ const useStyles = makeStyles((theme) => ({
   action: {
     backgroundColor: "red",
   },
+
+  snackRoot: {
+    marginLeft: theme.spacing(8),
+  },
+
+  contentRoot: {
+    backgroundColor: theme.palette.success.main,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "black",
+    border: "1px solid" + theme.palette.success.light,
+  }
+
 }));
 
 export default useStyles;

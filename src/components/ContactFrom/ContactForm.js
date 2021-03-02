@@ -1,5 +1,6 @@
 import React from "react";
 
+import emailjs from "emailjs-com";
 import useStyles from "./style";
 import {
   TextField,
@@ -10,7 +11,7 @@ import {
   Paper,
 } from "@material-ui/core";
 
-import { Formik, Field, Form, useField, FieldArray } from "formik";
+import { Formik, Form, } from "formik";
 import * as yup from "yup";
 
 import MessageIcon from "@material-ui/icons/Message";
@@ -53,103 +54,106 @@ export default function ContactForm() {
         handleChange,
         handleBlur,
       }) => (
-        <>
-          <Form className={classes.form}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Name"
-              name="name"
-              required
-              value={values.name}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              error={errors.name && touched.name}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <AccountBoxIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Email"
-              name="email"
-              required
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              error={errors.email && touched.email}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <MailIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Subject"
-              name="subject"
-              required
-              value={values.subject}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              error={errors.subject && touched.subject}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <SubjectIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Message"
-              name="message"
-              multiline
-              rows="4"
-              required
-              value={values.message}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              error={errors.message && touched.message}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment
-                    position="end"
-                    classes={{ root: classes.messageIcon }}
-                  >
-                    <MessageIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-            <Button
-              variant="outlined"
-              className={classes.sendBtn}
-              type="submit"
-            >
-              {!isSubmitting ? (
-                "Send"
-              ) : (
-                <CircularProgress size={25} color="inherit" />
-              )}
-            </Button>
-            {/* <Snackbar
-              open={isSubmitting}
-              classes={{ root: classes.snackRoot }}
-            /> */}
-          </Form>
-        </>
-      )}
+          <>
+            <Form className={classes.form}>
+              <TextField
+                fullWidth
+                variant="outlined"
+                label="Name"
+                name="name"
+                required
+                value={values.name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={errors.name && touched.name}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <AccountBoxIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <TextField
+                fullWidth
+                variant="outlined"
+                label="Email"
+                name="email"
+                required
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={errors.email && touched.email}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <MailIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <TextField
+                fullWidth
+                variant="outlined"
+                label="Subject"
+                name="subject"
+                required
+                value={values.subject}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={errors.subject && touched.subject}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <SubjectIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <TextField
+                fullWidth
+                variant="outlined"
+                label="Message"
+                name="message"
+                multiline
+                rows="4"
+                required
+                value={values.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={errors.message && touched.message}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment
+                      position="end"
+                      classes={{ root: classes.messageIcon }}
+                    >
+                      <MessageIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <Button
+                variant="outlined"
+                className={classes.sendBtn}
+                type="submit"
+              >
+                {!isSubmitting ? (
+                  "Send"
+                ) : (
+                    <CircularProgress size={25} color="inherit" />
+                  )}
+              </Button>
+              <Snackbar
+                message="Your email has been sent!"
+                open={isSubmitting}
+                anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
+                classes={{ root: classes.snackRoot }}
+                ContentProps={{ classes: { root: classes.contentRoot } }}
+              />
+            </Form>
+          </>
+        )}
     </Formik>
   );
 }
