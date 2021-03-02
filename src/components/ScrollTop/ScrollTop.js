@@ -7,7 +7,6 @@ export default function ScrollTop() {
   const classes = useStyles();
 
   const trigger = useScrollTrigger({ disableHysteresis: true });
-  console.log(trigger);
 
   return trigger ? (
     <a href="#top">

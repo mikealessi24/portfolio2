@@ -38,8 +38,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     margin: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      display: "flex",
-      flexDirection: "column",
+      margin: 0
     },
   },
   scrollBuffer: {

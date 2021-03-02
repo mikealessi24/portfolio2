@@ -77,6 +77,7 @@ export default function ProjectContainer() {
                 url={project.url}
                 date={project.date}
                 i={i}
+                key={i}
               />
             ))}
           </Grid>

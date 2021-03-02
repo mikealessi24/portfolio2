@@ -117,6 +117,7 @@ const useStyles = makeStyles((theme) => ({
   },
   name: {
     color: theme.palette.primary.main,
+    fontFamily: '"Arvo", serif',
   },
 
   toggle: {
