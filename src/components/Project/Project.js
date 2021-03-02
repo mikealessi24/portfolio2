@@ -55,3 +55,5 @@ export default function Project({ title, text, image, url, date, i }) {
     </Card>
   );
 }
+
+
