@@ -7,6 +7,9 @@ import useStyles from "./style";
 
 import pickup from "../../assets/Projects/pickup.png";
 import component from "../../assets/Projects/componentCart.png";
+import portfolio1 from "../../assets/Projects/portfoliov1.png"
+import eventGives from "../../assets/Projects/eventgives.png"
+import firstline from "../../assets/Projects/Firstline.png"
 
 export default function ProjectContainer() {
   const classes = useStyles();
@@ -30,22 +33,22 @@ export default function ProjectContainer() {
       date: "Late November 2020",
     },
     {
-      image: "",
+      image: portfolio1,
       title: "Portfolio v1",
       text: "ok",
       url: "",
       date: "Early January 2021",
     },
     {
-      image: "",
+      image: firstline,
       title: "FirstLine Social",
       text: "ok",
       url: "",
       date: "Late January 2021",
     },
     {
-      image: "",
-      title: "EventGives",
+      image: eventGives,
+      title: "Event.Gives",
       text: "ada stuff",
       url: "",
       date: "Febuary 2021",
