@@ -1,9 +1,9 @@
 import React from "react";
 import { light, dark } from "./Theme";
 import Main from "./components/Main/Main";
-import { ThemeProvider } from "@material-ui/core";
+import { ThemeProvider, CircularProgress } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
-import { lightBlue } from "@material-ui/core/colors";
+
 
 function App() {
   const [userTheme, setUserTheme] = React.useState(true);
@@ -18,3 +18,4 @@ function App() {
 }
 
 export default App;
+
