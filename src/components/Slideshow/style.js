@@ -21,9 +21,12 @@ const useStyles = makeStyles((theme) => ({
     width: "auto",
   },
   controls: {
-    height: "10%",
+    marginTop: theme.spacing(1),
+    height: 53,
     width: "100%",
-    backgroundColor: "red",
+    backgroundColor: theme.palette.primary.accent,
+    display: "flex",
+    justifyContent: "center",
   },
 }));
 

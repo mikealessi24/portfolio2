@@ -1,6 +1,10 @@
 import React from "react";
 
-import { Paper } from "@material-ui/core";
+import { Paper, IconButton } from "@material-ui/core";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import PauseIcon from "@material-ui/icons/Pause";
 import useStyles from "./style";
 
 import athens from "../../assets/Slideshow/athens.JPG";
@@ -14,21 +18,62 @@ export default function Slideshow() {
   const classes = useStyles();
   const slides = [brooklyn, athens, rome, cinque, puppyLu, santorini];
   const [image, setImage] = React.useState(0);
+  const [pause, setPause] = React.useState(false);
+
+  let changeSlide;
+
+  console.log(pause);
+
+  const handleClick = () => {
+    setPause(!pause);
+    clearTimeout(changeSlide);
+  };
+
+  const play = () => {
+    changeSlide = setTimeout(() => {
+      setImage(image + 1);
+    }, 2000);
+  };
 
   React.useEffect(() => {
-    if (image < slides.length) {
-      setTimeout(() => {
-        setImage(image + 1);
-      }, 3000);
-    } else {
-      setImage(0);
+    if (!pause) {
+      if (image < slides.length) {
+        play();
+      } else {
+        setImage(0);
+      }
     }
-  }, [image]);
+  }, [image, pause]);
 
   return (
     <Paper className={classes.imageContainer}>
       <img src={slides[image]} alt="" className={classes.image}></img>
-      <div className={classes.controls}></div>
+      <div className={classes.controls}>
+        <IconButton>
+          <ArrowBackIosIcon color="inheirt" className={classes.controlBtns} />
+        </IconButton>
+        <IconButton>
+          {!pause ? (
+            <PauseIcon
+              color="inherit"
+              className={classes.controlBtns}
+              onClick={() => handleClick()}
+            />
+          ) : (
+            <PlayArrowIcon
+              olor="inherit"
+              className={classes.controlBtns}
+              onClick={() => handleClick()}
+            />
+          )}
+        </IconButton>
+        <IconButton>
+          <ArrowForwardIosIcon
+            color="inherit"
+            className={classes.controlBtns}
+          />
+        </IconButton>
+      </div>
     </Paper>
   );
 }
