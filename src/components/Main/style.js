@@ -111,6 +111,9 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     right: 5,
   },
+  themeSwitchHide: {
+    display: "none",
+  },
   link: {
     color: "inherit",
     textDecoration: "inherit",
@@ -122,6 +125,12 @@ const useStyles = makeStyles((theme) => ({
 
   toggle: {
     backgroundColor: `${theme.palette.secondary.toggle} !important`,
+  },
+
+  blur: {
+    height: "100vh",
+    width: "100vw",
+    backgroundColor: "black",
   },
 }));
 

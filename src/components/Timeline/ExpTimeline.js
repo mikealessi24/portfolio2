@@ -26,7 +26,12 @@ export default function ExpTimeline() {
       <Timeline className={classes.timeline} align="alternate">
         <TimelineItem>
           <TimelineOppositeContent>
-            <Chip label="August 2015 - June 2019" className={classes.date} />
+            <Chip
+              label={
+                window.innerWidth < 600 ? "Aug 2015" : "August 2015 - June 2019"
+              }
+              className={classes.date}
+            />
           </TimelineOppositeContent>
           <TimelineSeparator>
             {/* <TimelineDot variant="outlined" color="primary"> */}
@@ -45,7 +50,14 @@ export default function ExpTimeline() {
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent>
-            <Chip label="March 2018 - August 2020" className={classes.date} />
+            <Chip
+              label={
+                window.innerWidth < 600
+                  ? "Mar 2015"
+                  : "March 2018 - August 2020"
+              }
+              className={classes.date}
+            />
           </TimelineOppositeContent>
           <TimelineSeparator>
             <Avatar src={stars} className={classes.avatar} />
@@ -63,7 +75,11 @@ export default function ExpTimeline() {
         <TimelineItem>
           <TimelineOppositeContent>
             <Chip
-              label="August 2020 - December 2020"
+              label={
+                window.innerWidth < 600
+                  ? "Aug 2020"
+                  : "August 2020 - December 2020"
+              }
               className={classes.date}
             />
           </TimelineOppositeContent>
@@ -82,7 +98,12 @@ export default function ExpTimeline() {
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent>
-            <Chip label="January 2021 - Present" className={classes.date} />
+            <Chip
+              label={
+                window.innerWidth < 600 ? "Jan 2021" : "January 2021 - Present"
+              }
+              className={classes.date}
+            />
           </TimelineOppositeContent>
           <TimelineSeparator>
             <Avatar src={ct} className={classes.avatar} />

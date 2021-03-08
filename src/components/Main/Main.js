@@ -38,19 +38,30 @@ import avi from "../../assets/avi.jpg";
 
 import { Avatar } from "@material-ui/core";
 
-import "./name.css"
+import "./name.css";
 
 export default function Main({ setUserTheme, userTheme }) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [mobileHide, setMobileHide] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
+    if (window.innerWidth < 600) {
+      setTimeout(() => {
+        setMobileHide(true);
+      }, 100);
+    }
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
+    if (window.innerWidth < 600) {
+      setTimeout(() => {
+        setMobileHide(false);
+      }, 165);
+    }
   };
 
   return (
@@ -87,7 +98,11 @@ export default function Main({ setUserTheme, userTheme }) {
               onChange={() => {
                 setUserTheme(!userTheme);
               }}
-              className={classes.themeSwitch}
+              className={
+                window.innerWidth < 600
+                  ? classes.themeSwitchHide
+                  : classes.themeSwitch
+              }
               classes={{
                 thumb: classes.toggle,
                 track: classes.toggle,
@@ -117,8 +132,8 @@ export default function Main({ setUserTheme, userTheme }) {
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
-                <ChevronLeftIcon />
-              )}
+              <ChevronLeftIcon />
+            )}
           </IconButton>
         </div>
         <List>
@@ -133,8 +148,8 @@ export default function Main({ setUserTheme, userTheme }) {
             { text: "Projects", icon: <AppsIcon />, id: "#projects" },
             { text: "Contact Me", icon: <ContactPhoneIcon />, id: "#contact" },
           ].map((item) => (
-            <a className={classes.link} href={item.id}>
-              <ListItem button key={item.text}>
+            <a className={classes.link} href={item.id} key={classes.text}>
+              <ListItem button>
                 <ListItemIcon className={classes.sideIcon}>
                   {item.icon}
                 </ListItemIcon>
@@ -179,8 +194,9 @@ export default function Main({ setUserTheme, userTheme }) {
               href={item.url}
               target="_blank"
               rel="noreferrer"
+              key={item.text}
             >
-              <ListItem button key={item.text}>
+              <ListItem button>
                 <ListItemIcon className={classes.sideIcon}>
                   {item.icon}
                 </ListItemIcon>
@@ -194,20 +210,26 @@ export default function Main({ setUserTheme, userTheme }) {
         </List>
       </Drawer>
       <main className={classes.content} id="top">
-        <ScrollTop />
-        <div className={classes.toolbar} />
-        <div className={classes.header}>
-          <Avatar
-            alt="Mike Alessi"
-            src={avi}
-            className={classes.headerAvatar}
-          />
-        </div>
-        <About />
-        <DevSkills />
-        <ExpTimeline />
-        <ProjectContainer />
-        <Contact />
+        {mobileHide ? (
+          <div className={classes.blur}></div>
+        ) : (
+          <>
+            <ScrollTop />
+            <div className={classes.toolbar} />
+            <div className={classes.header}>
+              <Avatar
+                alt="Mike Alessi"
+                src={avi}
+                className={classes.headerAvatar}
+              />
+            </div>
+            <About />
+            <DevSkills />
+            <ExpTimeline />
+            <ProjectContainer />
+            <Contact />
+          </>
+        )}
       </main>
     </div>
   );

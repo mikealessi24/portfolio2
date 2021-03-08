@@ -6,26 +6,25 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.font,
     [theme.breakpoints.down("sm")]: {
-      display: "none"
-    }
+      display: "none",
+    },
   },
   timelineContainer: {
     backgroundColor: theme.palette.primary.background,
     padding: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {
       padding: 0,
-    }
+    },
   },
   timeline: {
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {
-      margin: 0
-    }
+      margin: 0,
+    },
   },
   lineConnector: {
     height: 100,
-    backgroundColor: "#cc0000",
   },
   date: {
     marginTop: theme.spacing(1.5),
@@ -34,8 +33,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: 95,
       height: 30,
-      fontSize: 9
-    }
+    },
   },
   avatar: {
     margin: theme.spacing(1),
