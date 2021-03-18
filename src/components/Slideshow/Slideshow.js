@@ -11,22 +11,38 @@ import athens from "../../assets/Slideshow/athens.JPG";
 import brooklyn from "../../assets/Slideshow/brooklyn.jpeg";
 import cinque from "../../assets/Slideshow/cinque.JPG";
 import rome from "../../assets/Slideshow/rome.JPG";
-import puppyLu from "../../assets/Slideshow/puppyLuna.jpeg";
+import luna from "../../assets/Slideshow/puppyLuna.jpeg";
 import santorini from "../../assets/Slideshow/santorini.jpeg";
 
 export default function Slideshow() {
   const classes = useStyles();
-  const slides = [brooklyn, athens, rome, cinque, puppyLu, santorini];
+  const slides = [brooklyn, athens, rome, cinque, luna, santorini];
   const [image, setImage] = React.useState(0);
   const [pause, setPause] = React.useState(false);
 
   let changeSlide;
 
-  console.log(pause);
-
   const handleClick = () => {
     setPause(!pause);
     clearTimeout(changeSlide);
+  };
+
+  const handleRight = () => {
+    setPause(true);
+    if (image !== slides.length - 1) {
+      setImage(image + 1);
+    } else {
+      setImage(0);
+    }
+  };
+
+  const handleLeft = () => {
+    setPause(true);
+    if (image !== 0) {
+      setImage(image - 1);
+    } else {
+      setImage(slides.length - 1);
+    }
   };
 
   const play = () => {
@@ -50,7 +66,11 @@ export default function Slideshow() {
       <img src={slides[image]} alt="" className={classes.image}></img>
       <div className={classes.controls}>
         <IconButton>
-          <ArrowBackIosIcon color="inheirt" className={classes.controlBtns} />
+          <ArrowBackIosIcon
+            color="inheirt"
+            className={classes.controlBtns}
+            onClick={() => handleLeft()}
+          />
         </IconButton>
         <IconButton>
           {!pause ? (
@@ -71,6 +91,7 @@ export default function Slideshow() {
           <ArrowForwardIosIcon
             color="inherit"
             className={classes.controlBtns}
+            onClick={() => handleRight()}
           />
         </IconButton>
       </div>

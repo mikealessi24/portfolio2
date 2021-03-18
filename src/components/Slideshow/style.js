@@ -15,9 +15,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   image: {
-    maxHeight: "90%",
     maxWidth: "100%",
-    height: "auto",
+    height: 520,
     width: "auto",
   },
   controls: {
@@ -27,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.accent,
     display: "flex",
     justifyContent: "center",
+    border: "1px solid white",
+    borderRadius: "3px",
+  },
+  controlBtns: {
+    color: theme.palette.primary.font,
   },
 }));
 
