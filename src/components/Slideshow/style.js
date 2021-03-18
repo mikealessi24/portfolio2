@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.accent,
     display: "flex",
     justifyContent: "center",
-    border: "1px solid white",
+    border: `1px solid ${theme.palette.primary.font}`,
     borderRadius: "3px",
   },
   controlBtns: {

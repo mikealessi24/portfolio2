@@ -3,8 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(1),
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.font,
+    backgroundColor: theme.palette.primary.accent,
+    color: "white",
+    display: " flex",
+    justifyContent: "center",
+    border: `1px solid ${theme.palette.primary.font}`,
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -30,6 +33,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1.5),
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.secondary.font,
+    [theme.breakpoints.down("xs")]: {
+      width: 95,
+      height: 30,
+    },
+  },
+  titleChip: {
+    marginTop: theme.spacing(1.5),
+    backgroundColor: theme.palette.primary.accent,
+    color: "white",
+    border: `1px solid ${theme.palette.primary.font}`,
     [theme.breakpoints.down("xs")]: {
       width: 95,
       height: 30,

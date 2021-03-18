@@ -16,13 +16,20 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "100%",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    border: `1px solid ${theme.palette.primary.font}`,
+    [theme.breakpoints.down("sm")]: {
+      bottom: -10,
+      right: -10,
+      height: 50,
+      width: 50,
+    },
   },
   icon: {
     height: 30,
     width: 30,
-    borderRadius: "100%"
-  }
+    borderRadius: "100%",
+  },
 }));
 
 export default useStyles;

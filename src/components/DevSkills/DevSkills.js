@@ -25,18 +25,14 @@ export default function FullWidthGrid() {
             </Paper>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
+            {/* NOTE: this could use more content */}
             <Paper className={classes.paper}>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex
+              I have been developing software for close to a year now and I feel
+              like my skills are gradually increasing. I focus on using
+              javascript to create full stack applications. React is my frontend
+              framework of choice. I have been mostly working on the front-end
+              of projects at Code and Trust, but I do have some experience using
+              nodeJS to build API’s.
             </Paper>
             <SkillAccordian />
           </Grid>

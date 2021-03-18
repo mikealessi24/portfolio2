@@ -16,6 +16,7 @@ import santorini from "../../assets/Slideshow/santorini.jpeg";
 
 export default function Slideshow() {
   const classes = useStyles();
+  //NOTE: add more photos
   const slides = [brooklyn, athens, rome, cinque, luna, santorini];
   const [image, setImage] = React.useState(0);
   const [pause, setPause] = React.useState(false);

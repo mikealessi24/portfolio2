@@ -32,8 +32,9 @@ export default function SkillAccordian() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I use JavaScript for everything from creating functionality on the
+            front-end to writing API endpoints on the back-end. JS is the logic
+            of my software development.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -48,8 +49,8 @@ export default function SkillAccordian() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I use HTML along with JavaScript and CSS to create the front-end
+            side of my applications.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -64,8 +65,8 @@ export default function SkillAccordian() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I use CSS to style the front-end of my applications and put my
+            artistic touch on the user interface.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -80,8 +81,10 @@ export default function SkillAccordian() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I use React to make my user interfaces more organized and scalable.
+            React's component based approach helps to plug in display components
+            in different places and quickly change them if need be. This site
+            was built using Create React App!
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -96,8 +99,9 @@ export default function SkillAccordian() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I use Node for all of my back-end development. Node allows me to
+            construct REST API's using the ExpressJs library in order to
+            communicate with databases.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -112,8 +116,8 @@ export default function SkillAccordian() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I use MySQL and the SQL query language to create and retrieve data
+            from relational databases
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -128,8 +132,8 @@ export default function SkillAccordian() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I use AWS for cloud storage, authentication, serverless technology,
+            and deployment.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -144,8 +148,9 @@ export default function SkillAccordian() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I use Material UI to bootstrap my React components. It allows for
+            quicker development and a nicer looking UI, this page was built
+            using Material UI.
           </Typography>
         </AccordionDetails>
       </Accordion>

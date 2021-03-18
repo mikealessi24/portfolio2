@@ -21,15 +21,21 @@ import ct from "../../assets/codeTrust.jpeg";
 export default function ExpTimeline() {
   const classes = useStyles();
 
+  const [mobile, setMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    if (window.innerWidth < 600) {
+      setMobile(true);
+    }
+  }, []);
+
   return (
     <div className={classes.timelineContainer} id="timeline">
       <Timeline className={classes.timeline} align="alternate">
         <TimelineItem>
           <TimelineOppositeContent>
             <Chip
-              label={
-                window.innerWidth < 600 ? "Aug 2015" : "August 2015 - June 2019"
-              }
+              label={mobile ? "Aug 2015" : "August 2015 - June 2019"}
               className={classes.date}
             />
           </TimelineOppositeContent>
@@ -41,21 +47,14 @@ export default function ExpTimeline() {
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
-              <Typography variant="h6" component="h1">
-                College of Charleston
-              </Typography>
-              <Typography>Because you need strength</Typography>
+              <Typography variant="h6">College of Charleston</Typography>
             </Paper>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent>
             <Chip
-              label={
-                window.innerWidth < 600
-                  ? "Mar 2015"
-                  : "March 2018 - August 2020"
-              }
+              label={mobile ? "Mar 2015" : "March 2018 - August 2020"}
               className={classes.date}
             />
           </TimelineOppositeContent>
@@ -65,21 +64,14 @@ export default function ExpTimeline() {
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
-              <Typography variant="h6" component="h1">
-                Stars Rooftop & Grill Room
-              </Typography>
-              <Typography>Because it&apos;s awesome!</Typography>
+              <Typography variant="h6">Stars Rooftop & Grill Room</Typography>
             </Paper>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent>
             <Chip
-              label={
-                window.innerWidth < 600
-                  ? "Aug 2020"
-                  : "August 2020 - December 2020"
-              }
+              label={mobile ? "Aug 2020" : "August 2020 - December 2020"}
               className={classes.date}
             />
           </TimelineOppositeContent>
@@ -89,19 +81,14 @@ export default function ExpTimeline() {
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
-              <Typography variant="h6" component="h1">
-                JRS Coding School
-              </Typography>
-              <Typography>Because you need rest</Typography>
+              <Typography variant="h6">JRS Coding School</Typography>
             </Paper>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent>
             <Chip
-              label={
-                window.innerWidth < 600 ? "Jan 2021" : "January 2021 - Present"
-              }
+              label={mobile ? "Jan 2021" : "January 2021 - Present"}
               className={classes.date}
             />
           </TimelineOppositeContent>
@@ -110,10 +97,7 @@ export default function ExpTimeline() {
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
-              <Typography variant="h6" component="h1">
-                Code/+/Trust
-              </Typography>
-              <Typography>Because this is the life you love!</Typography>
+              <Typography variant="h6">Code/+/Trust</Typography>
             </Paper>
           </TimelineContent>
         </TimelineItem>
